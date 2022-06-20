@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verif. Nacionalidade</title>
+</head>
+
+<body>
+    <h1>Nacionalidade</h1>
+    Digite aqui seu país de origem: <br>
+    <input type="string" name="txtpais" id="txtpais">
+
+    <input type="button" value="Ok" onclick="confirmar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function confirmar() {
+            var pais = document.getElementById("txtpais")
+            var res = document.getElementById("res")
+            var txtp = (pais.value)
+            res.innerHTML = `<p>Já que você é do(a)<strong>${txtp}</strong>!</p>`
+            if (txtp == 'Brasil') {
+                res.innerHTML += `<p>Sua Nacionalidde é: <strong>Brasileiro(a)</strong>!</p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>Erstrangeiro(a)</strong>!</p>`
+            }
+        }
+
+    </script>
+</body>
+
+</html>
